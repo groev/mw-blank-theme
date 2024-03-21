@@ -1,0 +1,35 @@
+.fulltext {
+  @media (max-width: 1080px) {
+    padding-left: 16px;
+  }
+  h1 {
+    margin-bottom: 48px;
+  }
+  p {
+    @include font-text-big();
+  }
+  a {
+    @include font-text-big();
+    color: var(--rs-red);
+  }
+  .link {
+    @include font-text();
+    margin-top: 32px;
+    color: var(--rs-red);
+    display: flex;
+    transition: 0.3s all;
+    &:hover {
+      transition: 0.3s all;
+      transform: translateX(10px);
+      &:after {
+        transition: 0.3s all;
+        transform: translateX(10px);
+      }
+    }
+    &:after {
+      transition: 0.3s all;
+      content: url("../../assets/img/right-arrow.svg");
+      margin-left: 16px;
+    }
+  }
+}

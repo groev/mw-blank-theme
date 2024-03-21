@@ -1,0 +1,17 @@
+.quote {
+  background-color: var(--gl-blue);
+  text-align: center;
+  color: white;
+  .content {
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 36px auto;
+  }
+  .author {
+    @include font-text();
+  }
+  padding: 6rem 2rem;
+  p {
+    margin: 0;
+  }
+}

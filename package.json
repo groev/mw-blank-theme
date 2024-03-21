@@ -1,0 +1,15 @@
+{
+  "name": "mw-blank-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run css-watch &  yarn run js-watch",
+    "css-watch": "sass --watch --style=compressed  parts/*/*/*:assets/dist assets/css:assets/dist",
+    "js-watch": "watchify assets/js/main.js -o assets/dist/main.js -v"
+  },
+  "dependencies": {
+    "sass": "^1.70.0",
+    "watchify": "^4.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "acf/map",
+  "title": "Karte",
+  "description": " Block für alle Seiten.",
+  "style": [
+    "file:./style.scss",
+    "https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css"
+  ],
+  "script": "https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js",
+
+  "category": "rebstock",
+  "icon": "format-quote",
+  "keywords": ["hero", "video"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "supports": {
+    "align": ["full"],
+    "anchor": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

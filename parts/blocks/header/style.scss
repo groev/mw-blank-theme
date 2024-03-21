@@ -1,0 +1,27 @@
+.pageheader {
+  height: 45vh;
+  width: 100%;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  &:before {
+    @include image-darker();
+    height: 45vh;
+  }
+  .pageheader-content {
+    position: absolute;
+    bottom: 25px;
+    left: 128px;
+    max-width: 660px;
+    * {
+      line-height: 1.2;
+    }
+  }
+  @media (max-width: 1080px) {
+    .pageheader-content {
+      left: 32px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "acf/header",
+  "title": "Header",
+  "description": "Header Block für alle Seiten.",
+  "style": ["file:./style.scss"],
+  "category": "rebstock",
+  "icon": "cover-image",
+  "keywords": ["hero", "video"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["full"],
+    "anchor": true
+  }
+}

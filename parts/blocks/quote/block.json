@@ -1,0 +1,23 @@
+{
+  "name": "acf/quote",
+  "title": "Quote",
+  "description": " Block für alle Seiten.",
+  "style": ["file:./style.scss"],
+  "category": "rebstock",
+  "icon": "format-quote",
+  "keywords": ["hero", "video"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "supports": {
+    "align": ["full"],
+    "anchor": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

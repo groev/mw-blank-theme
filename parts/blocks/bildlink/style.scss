@@ -1,0 +1,63 @@
+.block-bildlink {
+  min-height: 60vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #eee;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10vh;
+  &:after {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.2)),
+      to(rgba(0, 0, 0, 0.8))
+    );
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  }
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .block-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    h2 {
+      margin: 0;
+    }
+    .link {
+      color: white;
+      text-decoration: none;
+      margin: 0 auto;
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      &:after {
+        -webkit-transition: 0.3s all;
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+        transition: 0.3s all;
+        content: url(../img/right-arrow.svg);
+        margin-left: 1rem;
+      }
+    }
+  }
+}

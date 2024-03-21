@@ -1,0 +1,55 @@
+.content-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  p {
+    @include font-text-big();
+    max-width: 1000px;
+    margin: 16px auto;
+  }
+  .content-group-items {
+    display: grid;
+    // auto grid
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 32px;
+    margin-top: 32px;
+
+    .item:hover {
+      transition: all 0.3s ease;
+      transform: scale(1.1);
+    }
+    .item {
+      text-align: left;
+      display: block;
+      width: 100%;
+      color: black;
+      text-decoration: none;
+      transition: all 0.3s !important;
+      &:hover {
+        transition: all 0.3s !important;
+        transform: scale(1.05) !important;
+      }
+      .item-image {
+        height: 420px;
+        background-size: cover;
+        background-position: center;
+      }
+      p {
+        display: block;
+        @include headline-font();
+        margin-top: 32px;
+      }
+      .more {
+        @include font-text();
+        margin-top: 16px;
+        color: var(--rs-red);
+        display: flex;
+        &:after {
+          content: url("../../assets/img/right-arrow.svg");
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}

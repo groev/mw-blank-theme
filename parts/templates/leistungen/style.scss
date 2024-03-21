@@ -1,0 +1,25 @@
+.leistung-intro {
+  background: var(--gl-blue);
+  padding: 4rem 8vw;
+  color: white;
+}
+
+.leistung-grid {
+  display: grid;
+  // auto grid
+  padding: 4rem 8vw;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 4rem;
+  .leistung {
+    text-align: center;
+    img {
+      width: 6rem;
+      height: 6rem;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 1rem;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+
+$dark: #333336;
+$blue: #212178;
+$lightgrey: #b3b3b3;
+$light: #cbdde7;
+$grey: #333336;
+$mobile: 768px;
+$tablet: 1024px;
+$wrap: 75rem;
+
+:root {
+  --gl-dark: #333336;
+  --gl-light: #cbdde7;
+  --gl-blue: #212178;
+  --gl-grey: #333336;
+  --gl-lightgrey: #b3b3b3;
+}
+
+body,
+html {
+  background: $light;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  position: relative;
+  color: $dark;
+  margin: 0;
+  padding: 0;
+}
+
+.gl-wrapper {
+  background: white;
+  max-width: $wrap;
+  margin: 0 auto;
+}
+
+.hide-mobile {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin image-darker {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.5);
+}
+
+// global styles
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.1;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+.align-full {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-editor-page {
+  .rs-header {
+    display: none !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.headline {
+  strong {
+    -webkit-text-decoration-color: transparent;
+    text-decoration-color: transparent;
+    border-bottom: 4px solid var(--rs-red);
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@mixin headline-big {
+  font-size: 60px;
+  margin: 16px 0;
+  line-height: 80px;
+  font-weight: normal;
+  @media (max-width: 1080px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@mixin headline-normal {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 48px;
+  @media (max-width: 1080px) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @media (max-width: 1080px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin headline-font {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+@mixin headline-font-small {
+  font-size: 24px;
+  font-weight: normal;
+  @media (max-width: 800px) {
+    font-size: 20px;
+  }
+}
+
+@mixin font-text-big {
+  font-family: "Work Sans";
+  font-size: 20px;
+  line-height: 36px;
+  @media (max-width: 1080px) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@mixin font-text-big-lower {
+  font-family: "Work Sans";
+  font-size: 20px;
+  line-height: 32px;
+  @media (max-width: 1080px) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@mixin font-text {
+  font-family: "Work Sans";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+@mixin font-text-small {
+  font-family: "Work Sans";
+  font-size: 12px;
+}
+
+.row {
+  padding: 12rem;
+  margin: 0px auto;
+  @media (max-width: 1080px) {
+    padding: 4rem 24px;
+    max-width: 100%;
+  }
+}
+
+.align-image_left {
+  > * {
+    width: 50%;
+  }
+}
+.align-image_right {
+  > * {
+    width: 50%;
+  }
+  flex-direction: row-reverse;
+}
+
+.row-small {
+  padding: 64px 196px;
+
+  box-sizing: border-box;
+  margin: 0 auto;
+  @media (max-width: 1080px) {
+    padding: 64px 24px;
+    max-width: 100%;
+  }
+}
+
+// common imports
+@import "../../parts/common/header/style.scss";
+@import "../../parts/common/footer/style.scss";
+
+// block imports
+@import "../../parts/blocks/hero/style.scss";
+@import "../../parts/blocks/bildlink/style.scss";
+@import "../../parts/blocks/header/style.scss";
+@import "../../parts/blocks/quote/style.scss";
+@import "../../parts/blocks/group/style.scss";
+@import "../../parts/blocks/text/style.scss";
+@import "../../parts/blocks/halfblock/style.scss";
+@import "../../parts/blocks/map/style.scss";
+
+// template imports
+@import "../../parts/templates/leistungen/style.scss";

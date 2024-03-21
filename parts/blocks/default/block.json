@@ -1,0 +1,22 @@
+{
+  "name": "acf/default",
+  "title": "default",
+  "description": "default für die Startseite.",
+  "style": ["file:./style.scss"],
+  "category": "rebstock",
+  "icon": "columns",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "supports": {
+    "align": ["full"]
+  },
+  "align": "align-full"
+}

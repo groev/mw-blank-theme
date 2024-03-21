@@ -1,0 +1,169 @@
+.gl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  .phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.25rem 1rem;
+    background: var(--gl-lightgrey);
+    color: white;
+    font-weight: bold;
+    border-radius: 0px 0 0.5rem 0px;
+    font-size: 0.75rem;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  @media (max-width: $mobile) {
+    justify-content: center;
+  }
+  .mobile-logo {
+    display: none;
+    img {
+      width: 200px;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+  .close {
+    display: none;
+    height: 1rem;
+    width: 2rem;
+    position: absolute;
+    top: 2rem;
+    z-index: 99;
+    right: 1rem;
+    align-items: center;
+    justify-content: center;
+    &:after,
+    &:before {
+      content: "";
+      height: 3px;
+      width: 100%;
+      background: white;
+      position: absolute;
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+  .main-nav {
+    width: 100%;
+    z-index: 50;
+    &.open {
+      display: flex;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      li {
+        a {
+          color: var(--gl-blue);
+          padding: 1rem 3rem;
+          display: block;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          text-decoration: none;
+          font-weight: bold;
+          position: relative;
+          &:hover {
+            &:after {
+              position: absolute;
+              height: 2px;
+              content: "";
+              width: 70%;
+              background: var(--gl-blue);
+              bottom: 0.5rem;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+      .logo {
+        @media (max-width: $mobile) {
+          display: none;
+        }
+        a {
+          font-size: 0;
+          font-size: 0;
+          height: 5rem;
+          width: 8rem;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: block;
+          &:hover {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+      background: var(--gl-blue);
+      position: fixed;
+      top: 0;
+      color: white;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+
+      ul {
+        flex-direction: column;
+        li {
+          a {
+            color: white;
+          }
+        }
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+  .hamburger {
+    position: absolute;
+    width: 2rem;
+    height: 1rem;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+    span {
+      display: block;
+      height: 3px;
+      background: var(--gl-blue);
+    }
+  }
+}
+
+body.open {
+  .close {
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+  }
+}

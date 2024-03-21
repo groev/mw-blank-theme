@@ -1,0 +1,59 @@
+.gl-hero {
+  min-height: 50vh;
+  background: var(--gl-blue);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  position: relative;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+
+    max-width: 500px;
+  }
+  .headline {
+    font-size: 4rem;
+    @media (max-width: $mobile) {
+      font-size: 2rem;
+    }
+  }
+  .image {
+    position: relative;
+    right: 0;
+    left: 0;
+    min-height: 50vh;
+
+    // schräge seite
+    &:after {
+      height: 100%;
+      width: 100%;
+      content: "";
+      position: absolute;
+      right: 0;
+      z-index: 0;
+      background-image: url("../../assets/img/zahnrad2.svg");
+      background-size: 200%;
+      background-position: 50% 0%;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+    }
+    img {
+      transform: scaleX(-1) translateX(0); // schräge seite
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      right: 0;
+      z-index: 1;
+      @media (max-width: $mobile) {
+        transform: scaleX(-1); // schräge seite
+      }
+    }
+  }
+}

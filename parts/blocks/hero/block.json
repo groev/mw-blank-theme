@@ -1,0 +1,24 @@
+{
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Hero Blcok für die Startseite.",
+  "style": ["file:./style.scss"],
+  "category": "rebstock",
+  "icon": "superhero-alt",
+  "keywords": ["hero", "video"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  },
+  "supports": {
+    "align": ["full"],
+
+    "anchor": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}
